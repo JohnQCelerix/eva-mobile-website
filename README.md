@@ -1,130 +1,95 @@
-# Eva Mobile - Web de Descarga
+# Eva Mobile Website
 
-Una web súper rápida y optimizada para mostrar los códigos QR de descarga de la aplicación Eva Mobile.
+Sitio web oficial de Eva Mobile - Evaluación de Vehículos con Inteligencia Artificial.
 
-## 🚀 Características
+## 🌐 Sitio Web
 
-- **Diseño Moderno**: Interfaz limpia y moderna con los colores oficiales de Eva Mobile
-- **Responsive**: Se adapta perfectamente a todos los dispositivos
-- **Optimizada**: Carga súper rápida con HTML, CSS y JavaScript vanilla
-- **Animaciones**: Efectos suaves y profesionales
-- **Instrucciones**: Guías claras para Android e iOS
+**URL del sitio:** https://johnqcelerix.github.io/eva-mobile-website/
 
-## 🎨 Colores de Eva Mobile
+## 📱 Acerca de Eva Mobile
 
-- **Primario**: `#244577` (Azul oscuro)
-- **Secundario**: `#6c757d` (Gris)
-- **Fondo**: `#06121e` (Azul muy oscuro)
-- **Texto**: `#fcfcfc` (Blanco)
-- **Énfasis**: `#007BFF` (Azul eléctrico)
+Eva Mobile es una aplicación móvil que utiliza inteligencia artificial para evaluar el estado de vehículos de forma precisa y objetiva. La aplicación soporta 7 tipos diferentes de motocicletas:
 
-## 📱 Instrucciones por Plataforma
+- Eléctricas
+- Mopets
+- Scooters
+- Enduro
+- Adventure
+- Street
+- MotoCarr
 
-### Android
-1. 📱 Escanea el código QR
-2. ⚙️ Ve a Configuración > Seguridad
-3. 🔓 Activa "Orígenes desconocidos"
-4. 📥 Instala la aplicación
+## ✨ Características del Sitio Web
 
-### iOS
-1. 📱 Escanea el código QR
-2. ⚙️ Ve a Configuración > General
-3. 👨‍💻 Activa "Modo desarrollador"
-4. 📥 Instala la aplicación
+- **Navegación fluida** con efectos de parpadeo suaves
+- **Diseño responsive** optimizado para móviles y desktop
+- **Interfaz moderna** con transiciones elegantes
+- **Información completa** sobre el proceso de evaluación IA
+- **Códigos QR** para descarga directa de la aplicación
 
-## 🛠️ Tecnologías Utilizadas
+## 🚀 Tecnologías Utilizadas
 
-- **HTML5**: Estructura semántica
-- **CSS3**: Estilos modernos con variables CSS
-- **JavaScript Vanilla**: Funcionalidad sin dependencias
-- **Google Fonts**: Tipografía Inter
-- **CSS Grid & Flexbox**: Layout responsivo
-
-## 🚀 Cómo Ejecutar
-
-### Opción 1: Servidor Local Simple
-```bash
-# Python 3
-python -m http.server 8000
-
-# Python 2
-python -m SimpleHTTPServer 8000
-
-# Node.js (si tienes npx)
-npx serve .
-```
-
-### Opción 2: Live Server (VS Code)
-1. Instala la extensión "Live Server"
-2. Click derecho en `index.html`
-3. Selecciona "Open with Live Server"
-
-### Opción 3: Servidor PHP
-```bash
-php -S localhost:8000
-```
+- HTML5
+- CSS3 (con variables CSS y Flexbox/Grid)
+- JavaScript (ES6+)
+- GitHub Pages para hosting
 
 ## 📁 Estructura del Proyecto
 
 ```
 eva-mobile-website/
 ├── index.html          # Página principal
-├── styles.css          # Estilos CSS
-├── script.js           # JavaScript
-└── README.md           # Documentación
+├── styles.css          # Estilos y animaciones
+├── script.js           # Lógica de navegación
+├── images/             # Imágenes y códigos QR
+│   ├── qr-android.png
+│   └── qr-ios.png
+├── package.json        # Configuración del proyecto
+└── README.md          # Este archivo
 ```
 
-## 🔧 Personalización
+## 🎨 Efectos de Navegación
 
-### Cambiar Colores
-Edita las variables CSS en `styles.css`:
+El sitio implementa efectos de navegación personalizados:
 
-```css
-:root {
-    --primary: #244577;
-    --secondary: #6c757d;
-    --background: #06121e;
-    --text-white: #fcfcfc;
-    --electric: #007BFF;
-}
+- **Títulos rápidos**: Los headers aparecen instantáneamente
+- **Contenido con parpadeo**: El resto del contenido tiene efecto de desvanecimiento suave
+- **Sin movimiento**: El contenido no se desplaza, solo cambia la opacidad
+
+## 📱 Secciones del Sitio
+
+1. **Inicio** - Características principales de Eva Mobile
+2. **Proceso IA** - Explicación del proceso de evaluación en 5 pasos
+3. **Resultados** - Tipos de reportes y criterios de evaluación
+4. **Seguridad** - Características de seguridad y autenticación
+5. **Estadísticas** - Métricas y datos de rendimiento
+6. **Descarga** - Códigos QR para Android e iOS
+7. **Detalles Técnicos** - Información técnica completa
+
+## 🔧 Desarrollo Local
+
+Para ejecutar el proyecto localmente:
+
+```bash
+# Clonar el repositorio
+git clone https://github.com/JohnQCelerix/eva-mobile-website.git
+
+# Navegar al directorio
+cd eva-mobile-website
+
+# Servir con Python (opcional)
+python3 -m http.server 8001
+
+# O abrir index.html directamente en el navegador
 ```
 
-### Agregar QR Reales
-1. Reemplaza los placeholders en `index.html`
-2. Usa una librería como `qrcode.js` en `script.js`
-3. Genera los QR con las URLs de descarga reales
+## 📄 Licencia
 
-## 📊 Optimizaciones Implementadas
+Este proyecto es parte de Celerix IA.
 
-- ✅ **Lazy Loading**: Contenido se carga cuando es visible
-- ✅ **Intersection Observer**: Animaciones eficientes
-- ✅ **CSS Variables**: Fácil personalización
-- ✅ **Responsive Design**: Adaptable a todos los dispositivos
-- ✅ **Performance**: Optimizado para velocidad
-- ✅ **Accessibility**: Estructura semántica
+## 🤝 Contribuciones
 
-## 🌐 Despliegue
-
-### GitHub Pages
-1. Sube el código a GitHub
-2. Ve a Settings > Pages
-3. Selecciona la rama main
-4. Tu sitio estará disponible en `https://usuario.github.io/repositorio`
-
-### Netlify
-1. Conecta tu repositorio a Netlify
-2. Configura el directorio de build como `/`
-3. Despliega automáticamente
-
-### Vercel
-1. Conecta tu repositorio a Vercel
-2. Configura como proyecto estático
-3. Despliega con un click
-
-## 📞 Soporte
-
-Para cualquier pregunta o problema, contacta al equipo de desarrollo de Eva Mobile.
+Las contribuciones son bienvenidas. Por favor, abre un issue o pull request.
 
 ---
 
-**Desarrollado con ❤️ para Eva Mobile** 
+**Desarrollado con ❤️ por el equipo de Celerix IA** 
