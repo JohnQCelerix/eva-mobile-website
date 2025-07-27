@@ -65,6 +65,11 @@ document.addEventListener('DOMContentLoaded', function() {
         if (activeLink) {
             activeLink.classList.add('active');
         }
+        
+        // Hacer scroll hacia arriba
+        setTimeout(() => {
+            window.scrollTo(0, 0);
+        }, 200);
     }
 
     // Event listeners para navegación
@@ -88,4 +93,43 @@ document.addEventListener('DOMContentLoaded', function() {
     // Mostrar página inicial basada en hash de URL
     const initialPage = window.location.hash.slice(1) || 'inicio';
     showPage(initialPage);
+});
+
+// Sistema de temas
+document.addEventListener('DOMContentLoaded', function() {
+    const themeToggle = document.getElementById('theme-toggle');
+    
+    // Función para detectar el tema del sistema
+    function getSystemTheme() {
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    
+    // Función para establecer el tema
+    function setTheme(theme) {
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+    }
+    
+    // Función para obtener el tema guardado o del sistema
+    function getTheme() {
+        const savedTheme = localStorage.getItem('theme');
+        return savedTheme || getSystemTheme();
+    }
+    
+    // Inicializar tema
+    setTheme(getTheme());
+    
+    // Event listener para el botón de tema
+    themeToggle.addEventListener('click', function() {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        setTheme(newTheme);
+    });
+    
+    // Escuchar cambios en el tema del sistema
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+        if (!localStorage.getItem('theme')) {
+            setTheme(e.matches ? 'dark' : 'light');
+        }
+    });
 }); 

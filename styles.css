@@ -6,6 +6,7 @@
 }
 
 :root {
+    /* Tema Claro */
     --black: #000000;
     --white: #ffffff;
     --gray-100: #f5f5f7;
@@ -17,16 +18,37 @@
     --gray-700: #1d1d1f;
     --primary: #244577;
     --font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', sans-serif;
+    
+    /* Variables de tema */
+    --bg-primary: var(--white);
+    --bg-secondary: var(--gray-100);
+    --text-primary: var(--black);
+    --text-secondary: var(--gray-500);
+    --border-color: var(--gray-200);
+    --card-bg: var(--white);
+    --shadow: rgba(0, 0, 0, 0.1);
+}
+
+/* Tema Oscuro */
+[data-theme="dark"] {
+    --bg-primary: #0a0a0a;
+    --bg-secondary: #1a1a1a;
+    --text-primary: #ffffff;
+    --text-secondary: #a0a0a0;
+    --border-color: #2a2a2a;
+    --card-bg: #1a1a1a;
+    --shadow: rgba(0, 0, 0, 0.3);
 }
 
 body {
     font-family: var(--font-family);
-    background: var(--white);
-    color: var(--black);
+    background: var(--bg-primary);
+    color: var(--text-primary);
     line-height: 1.6;
     font-size: 14px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .container {
@@ -40,8 +62,8 @@ body {
 
 /* Navegación */
 .navbar {
-    background: var(--white);
-    border-bottom: 1px solid var(--gray-200);
+    background: var(--bg-primary);
+    border-bottom: 1px solid var(--border-color);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -51,30 +73,71 @@ body {
 }
 
 .nav-container {
-    max-width: 1200px;
+    max-width: 900px;
     margin: 0 auto;
-    padding: 0 30px;
+    padding: 0 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 70px;
+    height: 60px;
     transition: all 0.3s ease;
 }
 
 .nav-logo h2 {
     font-size: 1.25rem;
     font-weight: 600;
-    color: var(--black);
+    color: var(--text-primary);
     letter-spacing: -0.01em;
     transition: color 0.3s ease;
+}
+
+/* Theme Switch */
+.theme-switch {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+}
+
+.theme-toggle {
+    background: none;
+    border: 2px solid var(--border-color);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: var(--text-primary);
+}
+
+.theme-toggle:hover {
+    background: var(--bg-secondary);
+    transform: scale(1.1);
+}
+
+.theme-toggle .sun-icon {
+    display: none;
+}
+
+.theme-toggle .moon-icon {
+    display: block;
+}
+
+[data-theme="dark"] .theme-toggle .sun-icon {
+    display: block;
+}
+
+[data-theme="dark"] .theme-toggle .moon-icon {
+    display: none;
 }
 
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: 2.5rem;
+    gap: 2rem;
     transition: all 0.3s ease;
-    align-items: center;
 }
 
 .nav-item {
@@ -89,24 +152,23 @@ body {
 
 .nav-link {
     text-decoration: none;
-    color: var(--gray-500);
+    color: var(--text-secondary);
     font-weight: 500;
-    font-size: 0.9rem;
-    padding: 0.75rem 0;
+    font-size: 0.875rem;
+    padding: 0.5rem 0;
     border-bottom: 2px solid transparent;
     transition: all 0.3s ease;
     white-space: nowrap;
     position: relative;
-    letter-spacing: 0.01em;
 }
 
 .nav-link:hover {
-    color: var(--black);
+    color: var(--text-primary);
     transform: translateY(-1px);
 }
 
 .nav-link.active {
-    color: var(--primary);
+    color: var(--text-primary);
     border-bottom-color: var(--primary);
 }
 
@@ -142,7 +204,7 @@ body {
 .header {
     padding: 2rem 0 1.5rem 0;
     text-align: center;
-    border-bottom: 1px solid var(--gray-200);
+    border-bottom: 1px solid var(--border-color);
     margin-bottom: 2rem;
     opacity: 1;
     transition: opacity 0.05s ease;
@@ -151,14 +213,14 @@ body {
 .logo h1 {
     font-size: 2.5rem;
     font-weight: 600;
-    color: var(--black);
+    color: var(--text-primary);
     margin-bottom: 0.25rem;
     letter-spacing: -0.02em;
 }
 
 .logo p {
     font-size: 1rem;
-    color: var(--gray-500);
+    color: var(--text-secondary);
     font-weight: 400;
 }
 
@@ -174,7 +236,7 @@ body {
 .features-section h2 {
     font-size: 1.5rem;
     font-weight: 600;
-    color: var(--black);
+    color: var(--text-primary);
     margin-bottom: 2rem;
     text-align: center;
     letter-spacing: -0.01em;
@@ -188,8 +250,8 @@ body {
 }
 
 .feature-card {
-    background: var(--white);
-    border: 1px solid var(--gray-200);
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
     border-radius: 12px;
     padding: 1.5rem;
     transition: all 0.3s ease;
@@ -214,7 +276,7 @@ body {
 
 .feature-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 8px 25px var(--shadow);
 }
 
 .feature-icon {
@@ -231,13 +293,13 @@ body {
 .feature-card h3 {
     font-size: 1.125rem;
     font-weight: 600;
-    color: var(--black);
+    color: var(--text-primary);
     margin-bottom: 0.5rem;
     letter-spacing: -0.01em;
 }
 
 .feature-card p {
-    color: var(--gray-500);
+    color: var(--text-secondary);
     font-size: 0.875rem;
     line-height: 1.5;
 }
@@ -246,7 +308,7 @@ body {
 .process-section h2 {
     font-size: 1.5rem;
     font-weight: 600;
-    color: var(--black);
+    color: var(--text-primary);
     margin-bottom: 2rem;
     text-align: center;
     letter-spacing: -0.01em;
@@ -262,8 +324,8 @@ body {
 .step-card {
     display: flex;
     gap: 1.5rem;
-    background: var(--white);
-    border: 1px solid var(--gray-200);
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
     border-radius: 12px;
     padding: 1.5rem;
     transition: all 0.3s ease;
@@ -288,7 +350,7 @@ body {
 
 .step-card:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 20px var(--shadow);
 }
 
 .step-number {
@@ -308,13 +370,13 @@ body {
 .step-content h3 {
     font-size: 1.125rem;
     font-weight: 600;
-    color: var(--black);
+    color: var(--text-primary);
     margin-bottom: 0.5rem;
     letter-spacing: -0.01em;
 }
 
 .step-content p {
-    color: var(--gray-500);
+    color: var(--text-secondary);
     font-size: 0.875rem;
     line-height: 1.5;
     margin-bottom: 0.75rem;
@@ -326,7 +388,7 @@ body {
 }
 
 .step-content li {
-    color: var(--gray-500);
+    color: var(--text-secondary);
     font-size: 0.8rem;
     line-height: 1.4;
     margin-bottom: 0.25rem;
@@ -341,7 +403,7 @@ body {
 }
 
 .ai-analysis {
-    background: var(--gray-100);
+    background: var(--bg-secondary);
     border-radius: 12px;
     padding: 1.5rem;
     margin-top: 2rem;
@@ -350,13 +412,13 @@ body {
 .ai-analysis h3 {
     font-size: 1.125rem;
     font-weight: 600;
-    color: var(--black);
+    color: var(--text-primary);
     margin-bottom: 0.75rem;
     letter-spacing: -0.01em;
 }
 
 .ai-analysis p {
-    color: var(--gray-500);
+    color: var(--text-secondary);
     font-size: 0.875rem;
     line-height: 1.5;
 }
@@ -365,7 +427,7 @@ body {
 .results-section h2 {
     font-size: 1.5rem;
     font-weight: 600;
-    color: var(--black);
+    color: var(--text-primary);
     margin-bottom: 2rem;
     text-align: center;
     letter-spacing: -0.01em;
@@ -379,8 +441,8 @@ body {
 }
 
 .result-card {
-    background: var(--white);
-    border: 1px solid var(--gray-200);
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
     border-radius: 12px;
     padding: 1.5rem;
     transition: all 0.3s ease;
@@ -422,19 +484,19 @@ body {
 .result-card h3 {
     font-size: 1.125rem;
     font-weight: 600;
-    color: var(--black);
+    color: var(--text-primary);
     margin-bottom: 0.5rem;
     letter-spacing: -0.01em;
 }
 
 .result-card p {
-    color: var(--gray-500);
+    color: var(--text-secondary);
     font-size: 0.875rem;
     line-height: 1.5;
 }
 
 .evaluation-criteria {
-    background: var(--gray-100);
+    background: var(--bg-secondary);
     border-radius: 12px;
     padding: 1.5rem;
     margin-top: 2rem;
@@ -443,7 +505,7 @@ body {
 .evaluation-criteria h3 {
     font-size: 1.125rem;
     font-weight: 600;
-    color: var(--black);
+    color: var(--text-primary);
     margin-bottom: 1rem;
     letter-spacing: -0.01em;
 }
@@ -455,17 +517,17 @@ body {
 }
 
 .criteria-item {
-    color: var(--gray-500);
+    color: var(--text-secondary);
     font-size: 0.875rem;
     line-height: 1.4;
     padding: 0.5rem;
-    background: var(--white);
+    background: var(--card-bg);
     border-radius: 6px;
-    border: 1px solid var(--gray-200);
+    border: 1px solid var(--border-color);
 }
 
 .criteria-item strong {
-    color: var(--black);
+    color: var(--text-primary);
     font-weight: 600;
 }
 
@@ -473,7 +535,7 @@ body {
 .companies-section h2 {
     font-size: 1.5rem;
     font-weight: 600;
-    color: var(--black);
+    color: var(--text-primary);
     margin-bottom: 2rem;
     text-align: center;
     letter-spacing: -0.01em;
@@ -487,8 +549,8 @@ body {
 }
 
 .company-card {
-    background: var(--white);
-    border: 1px solid var(--gray-200);
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
     border-radius: 12px;
     padding: 1.5rem;
     transition: all 0.3s ease;
@@ -502,7 +564,7 @@ body {
 .company-icon {
     width: 64px;
     height: 64px;
-    background: var(--gray-100);
+    background: var(--bg-secondary);
     border-radius: 12px;
     display: flex;
     align-items: center;
@@ -513,7 +575,7 @@ body {
 .company-card h3 {
     font-size: 1.25rem;
     font-weight: 600;
-    color: var(--black);
+    color: var(--text-primary);
     margin-bottom: 0.25rem;
     letter-spacing: -0.01em;
 }
@@ -531,7 +593,7 @@ body {
 }
 
 .company-card li {
-    color: var(--gray-500);
+    color: var(--text-secondary);
     font-size: 0.875rem;
     line-height: 1.5;
     margin-bottom: 0.5rem;
@@ -549,7 +611,7 @@ body {
 .qr-section h2 {
     font-size: 1.5rem;
     font-weight: 600;
-    color: var(--black);
+    color: var(--text-primary);
     margin-bottom: 2rem;
     text-align: center;
     letter-spacing: -0.01em;
@@ -568,7 +630,7 @@ body {
     justify-content: space-between;
     gap: 2rem;
     padding: 1rem 0;
-    border-bottom: 1px solid var(--gray-200);
+    border-bottom: 1px solid var(--border-color);
 }
 
 .platform:last-child {
@@ -584,26 +646,37 @@ body {
 }
 
 .platform-icon {
-    width: 36px;
-    height: 36px;
+    width: 48px;
+    height: 48px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--gray-100);
+    background: var(--card-bg);
     border-radius: 8px;
     padding: 8px;
 }
 
+[data-theme="dark"] .platform-icon {
+    background: #4a4a4a;
+    border: 1px solid #5a5a5a;
+}
+
 .platform-icon svg {
-    width: 20px;
-    height: 20px;
-    fill: var(--black);
+    width: 28px;
+    height: 28px;
+    fill: var(--primary);
+}
+
+[data-theme="dark"] .platform-icon svg {
+    fill: #ffffff;
+    opacity: 1;
+    filter: brightness(1.2);
 }
 
 .platform-header h3 {
     font-size: 1.25rem;
     font-weight: 600;
-    color: var(--black);
+    color: var(--text-primary);
     letter-spacing: -0.01em;
 }
 
@@ -640,7 +713,7 @@ body {
 .tech-section h2 {
     font-size: 1.5rem;
     font-weight: 600;
-    color: var(--black);
+    color: var(--text-primary);
     margin-bottom: 2rem;
     text-align: center;
     letter-spacing: -0.01em;
@@ -654,8 +727,8 @@ body {
 }
 
 .tech-card {
-    background: var(--white);
-    border: 1px solid var(--gray-200);
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
     border-radius: 12px;
     padding: 1.5rem;
     transition: all 0.3s ease;
@@ -686,10 +759,10 @@ body {
 .tech-card h3 {
     font-size: 1.125rem;
     font-weight: 600;
-    color: var(--black);
+    color: var(--text-primary);
     margin-bottom: 1rem;
     letter-spacing: -0.01em;
-    border-bottom: 1px solid var(--gray-200);
+    border-bottom: 1px solid var(--border-color);
     padding-bottom: 0.5rem;
 }
 
@@ -698,7 +771,7 @@ body {
 }
 
 .tech-card li {
-    color: var(--gray-500);
+    color: var(--text-secondary);
     font-size: 0.875rem;
     line-height: 1.6;
     margin-bottom: 0.5rem;
@@ -706,7 +779,7 @@ body {
 }
 
 .tech-card strong {
-    color: var(--black);
+    color: var(--text-primary);
     font-weight: 600;
 }
 
@@ -714,7 +787,7 @@ body {
 .security-section h2 {
     font-size: 1.5rem;
     font-weight: 600;
-    color: var(--black);
+    color: var(--text-primary);
     margin-bottom: 2rem;
     text-align: center;
     letter-spacing: -0.01em;
@@ -728,8 +801,8 @@ body {
 }
 
 .security-card {
-    background: var(--white);
-    border: 1px solid var(--gray-200);
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
     border-radius: 12px;
     padding: 1.5rem;
     transition: all 0.3s ease;
@@ -760,7 +833,7 @@ body {
 .security-icon {
     width: 48px;
     height: 48px;
-    background: var(--gray-100);
+    background: var(--bg-secondary);
     border-radius: 8px;
     display: flex;
     align-items: center;
@@ -771,13 +844,13 @@ body {
 .security-card h3 {
     font-size: 1.125rem;
     font-weight: 600;
-    color: var(--black);
+    color: var(--text-primary);
     margin-bottom: 0.5rem;
     letter-spacing: -0.01em;
 }
 
 .security-card p {
-    color: var(--gray-500);
+    color: var(--text-secondary);
     font-size: 0.875rem;
     line-height: 1.5;
 }
@@ -786,7 +859,7 @@ body {
 .stats-section h2 {
     font-size: 1.5rem;
     font-weight: 600;
-    color: var(--black);
+    color: var(--text-primary);
     margin-bottom: 2rem;
     text-align: center;
     letter-spacing: -0.01em;
@@ -800,8 +873,8 @@ body {
 }
 
 .stat-card {
-    background: var(--white);
-    border: 1px solid var(--gray-200);
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
     border-radius: 12px;
     padding: 1.5rem;
     text-align: center;
@@ -841,19 +914,19 @@ body {
 .stat-card h3 {
     font-size: 1.125rem;
     font-weight: 600;
-    color: var(--black);
+    color: var(--text-primary);
     margin-bottom: 0.5rem;
     letter-spacing: -0.01em;
 }
 
 .stat-card p {
-    color: var(--gray-500);
+    color: var(--text-secondary);
     font-size: 0.875rem;
     line-height: 1.5;
 }
 
 .performance-metrics {
-    background: var(--gray-100);
+    background: var(--bg-secondary);
     border-radius: 12px;
     padding: 1.5rem;
     margin-top: 2rem;
@@ -862,7 +935,7 @@ body {
 .performance-metrics h3 {
     font-size: 1.125rem;
     font-weight: 600;
-    color: var(--black);
+    color: var(--text-primary);
     margin-bottom: 1rem;
     letter-spacing: -0.01em;
 }
@@ -874,17 +947,17 @@ body {
 }
 
 .metric-item {
-    color: var(--gray-500);
+    color: var(--text-secondary);
     font-size: 0.875rem;
     line-height: 1.4;
     padding: 0.5rem;
-    background: var(--white);
+    background: var(--card-bg);
     border-radius: 6px;
-    border: 1px solid var(--gray-200);
+    border: 1px solid var(--border-color);
 }
 
 .metric-item strong {
-    color: var(--black);
+    color: var(--text-primary);
     font-weight: 600;
 }
 
@@ -892,7 +965,7 @@ body {
 .terms-section h2 {
     font-size: 1.5rem;
     font-weight: 600;
-    color: var(--black);
+    color: var(--text-primary);
     margin-bottom: 2rem;
     text-align: center;
     letter-spacing: -0.01em;
@@ -906,8 +979,8 @@ body {
 }
 
 .terms-card {
-    background: var(--white);
-    border: 1px solid var(--gray-200);
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
     border-radius: 12px;
     padding: 1.5rem;
     transition: all 0.3s ease;
@@ -938,15 +1011,15 @@ body {
 .terms-card h3 {
     font-size: 1.125rem;
     font-weight: 600;
-    color: var(--black);
+    color: var(--text-primary);
     margin-bottom: 0.75rem;
     letter-spacing: -0.01em;
-    border-bottom: 1px solid var(--gray-200);
+    border-bottom: 1px solid var(--border-color);
     padding-bottom: 0.5rem;
 }
 
 .terms-card p {
-    color: var(--gray-500);
+    color: var(--text-secondary);
     font-size: 0.875rem;
     line-height: 1.6;
     margin-bottom: 0.75rem;
@@ -958,7 +1031,7 @@ body {
 }
 
 .terms-card li {
-    color: var(--gray-500);
+    color: var(--text-secondary);
     font-size: 0.875rem;
     line-height: 1.6;
     margin-bottom: 0.75rem;
@@ -976,7 +1049,7 @@ body {
 }
 
 .terms-card strong {
-    color: var(--black);
+    color: var(--text-primary);
     font-weight: 600;
 }
 
@@ -984,28 +1057,15 @@ body {
 .footer {
     text-align: center;
     padding: 1.5rem 0;
-    color: var(--gray-500);
+    color: var(--text-secondary);
     font-size: 0.875rem;
-    border-top: 1px solid var(--gray-200);
+    border-top: 1px solid var(--border-color);
     margin-top: 2rem;
 }
 
 /* Responsive Design */
-@media (min-width: 1200px) {
-    .nav-container {
-        max-width: 1400px;
-        padding: 0 40px;
-    }
-    
-    .nav-menu {
-        gap: 3rem;
-    }
-    
-    .nav-link {
-        font-size: 0.95rem;
-        padding: 0.875rem 0;
-    }
-}
+
+
 
 @media (max-width: 768px) {
     .container {
