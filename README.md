@@ -31,7 +31,7 @@ Eva Mobile es una aplicación móvil que utiliza inteligencia artificial para ev
 - HTML5
 - CSS3 (con variables CSS y Flexbox/Grid)
 - JavaScript (ES6+)
-- GitHub Pages para hosting
+- GitHub Pages (despliegue automático)
 
 ## 📁 Estructura del Proyecto
 
