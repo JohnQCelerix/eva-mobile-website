@@ -1,0 +1,30 @@
+{
+  "name": "eva-mobile-website",
+  "version": "1.0.0",
+  "description": "Web súper rápida para mostrar QR de descarga de Eva Mobile",
+  "main": "index.html",
+  "scripts": {
+    "start": "python3 -m http.server 8000",
+    "dev": "python3 -m http.server 8000",
+    "serve": "npx serve .",
+    "build": "echo 'No build step needed for static site'",
+    "deploy": "echo 'Deploy to your preferred hosting service'"
+  },
+  "keywords": [
+    "eva-mobile",
+    "qr",
+    "download",
+    "react-native",
+    "celerix"
+  ],
+  "author": "Eva Mobile Team",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.2.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/celerix/eva-mobile-website.git"
+  },
+  "homepage": "https://eva-mobile.celerix.com"
+} 

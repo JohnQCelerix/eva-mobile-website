@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eva Mobile - Evaluación de Vehículos con IA</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Menú de Navegación -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h2>Eva Mobile</h2>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#inicio" class="nav-link active" data-page="inicio">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#proceso" class="nav-link" data-page="proceso">Proceso IA</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#resultados" class="nav-link" data-page="resultados">Resultados</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#seguridad" class="nav-link" data-page="seguridad">Seguridad</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#estadisticas" class="nav-link" data-page="estadisticas">Estadísticas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#descarga" class="nav-link" data-page="descarga">Descarga</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#detalles" class="nav-link" data-page="detalles">Detalles Técnicos</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Página de Inicio -->
+        <div id="inicio" class="page active">
+            <header class="header">
+                <div class="logo">
+                    <h1>Eva Mobile</h1>
+                    <p>Evaluación de Vehículos con Inteligencia Artificial</p>
+                </div>
+            </header>
+            <main class="main-content">
+                <div class="features-section">
+                    <h2>¿Qué puede hacer Eva Mobile?</h2>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="#244577" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <h3>Evaluación Inteligente</h3>
+                            <p>Utiliza IA avanzada para evaluar el estado de vehículos de forma precisa y objetiva.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                                    <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" stroke="#244577" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <circle cx="12" cy="13" r="4" stroke="#244577" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <h3>Captura de Imágenes</h3>
+                            <p>Captura secuencial de imágenes para análisis detallado de cada componente de la motocicleta.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                                    <path d="M9 12l2 2 4-4" stroke="#244577" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M21 12c-1 0-2-1-2-2s1-2 2-2 2 1 2 2-1 2-2 2z" stroke="#244577" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M3 12c1 0 2-1 2-2s-1-2-2-2-2 1-2 2 1 2 2 2z" stroke="#244577" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M12 21c0-1 1-2 2-2s2 1 2 2-1 2-2 2-2-1-2-2z" stroke="#244577" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M12 3c0 1-1 2-2 2s-2-1-2-2 1-2 2-2 2 1 2 2z" stroke="#244577" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <h3>Múltiples Tipos</h3>
+                            <p>Soporte para motocicletas eléctricas, mopets, scooters, enduro, adventure, street y motocarr.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke="#244577" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <polyline points="14,2 14,8 20,8" stroke="#244577" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <line x1="16" y1="13" x2="8" y2="13" stroke="#244577" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <line x1="16" y1="17" x2="8" y2="17" stroke="#244577" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <polyline points="10,9 9,9 8,9" stroke="#244577" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <h3>Reportes Detallados</h3>
+                            <p>Genera reportes completos con puntuaciones y recomendaciones específicas.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="#244577" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <h3>Seguridad Garantizada</h3>
+                            <p>Autenticación segura y protección de datos con estándares empresariales.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                                    <path d="M9 12l2 2 4-4" stroke="#244577" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M21 12c-1 0-2-1-2-2s1-2 2-2 2 1 2 2-1 2-2 2z" stroke="#244577" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M3 12c1 0 2-1 2-2s-1-2-2-2-2 1-2 2 1 2 2 2z" stroke="#244577" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <h3>Control de Movimientos</h3>
+                            <p>Seguimiento y control de movimientos de motocicletas con evaluaciones de entrada y salida.</p>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <!-- Página del Proceso IA -->
+        <div id="proceso" class="page">
+            <header class="header">
+                <div class="logo">
+                    <h1>Proceso de Evaluación IA</h1>
+                    <p>Captura secuencial y análisis inteligente</p>
+                </div>
+            </header>
+            <main class="main-content">
+                <div class="process-section">
+                    <h2>Proceso de Evaluación en 5 Pasos</h2>
+                    <div class="process-steps">
+                        <div class="step-card">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h3>Vista Frontal</h3>
+                                <p><strong>Descripción:</strong> Toma frontal con manubrio recto y buena iluminación.</p>
+                                <ul>
+                                    <li>Usa buena iluminación para evitar sombras</li>
+                                    <li>Asegúrate de que el manubrio esté recto</li>
+                                    <li>Evita fondos desordenados</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h3>Vista Lateral Derecha</h3>
+                                <p><strong>Descripción:</strong> Toma a nivel del suelo para capturar todo el perfil.</p>
+                                <ul>
+                                    <li>Mantén la cámara a la altura de la moto</li>
+                                    <li>Asegúrate de que esté completamente visible</li>
+                                    <li>Verifica que no haya obstrucciones</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h3>Vista Lateral Izquierda</h3>
+                                <p><strong>Descripción:</strong> Fondo limpio y superficie estable.</p>
+                                <ul>
+                                    <li>Evita demasiada luz de fondo</li>
+                                    <li>Busca ángulos con buenos detalles</li>
+                                    <li>Verifica el soporte lateral</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h3>Vista Trasera</h3>
+                                <p><strong>Descripción:</strong> Evita reflejos e incluye la placa si es necesario.</p>
+                                <ul>
+                                    <li>Asegúrate de que la placa sea legible</li>
+                                    <li>Evita reflejos en luces traseras</li>
+                                    <li>Mantén la foto alineada</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-number">5</div>
+                            <div class="step-content">
+                                <h3>Vista Superior</h3>
+                                <p><strong>Descripción:</strong> Acércate para números legibles y evita reflejos.</p>
+                                <ul>
+                                    <li>Evita reflejos en la pantalla</li>
+                                    <li>Usa enfoque automático o manual</li>
+                                    <li>Iluminación uniforme</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ai-analysis">
+                        <h3>Análisis de IA</h3>
+                        <p>Una vez capturadas las 5 imágenes, Eva IA analiza cada componente de la motocicleta utilizando algoritmos avanzados de machine learning para generar una evaluación precisa y objetiva.</p>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <!-- Página de Resultados -->
+        <div id="resultados" class="page">
+            <header class="header">
+                <div class="logo">
+                    <h1>Resultados y Reportes</h1>
+                    <p>Análisis completo y detallado</p>
+                </div>
+            </header>
+            <main class="main-content">
+                <div class="results-section">
+                    <h2>Tipos de Resultados</h2>
+                    <div class="results-grid">
+                        <div class="result-card">
+                            <div class="result-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                                    <path d="M9 12l2 2 4-4" stroke="#244577" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M21 12c-1 0-2-1-2-2s1-2 2-2 2 1 2 2-1 2-2 2z" stroke="#244577" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M3 12c1 0 2-1 2-2s-1-2-2-2-2 1-2 2 1 2 2 2z" stroke="#244577" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <h3>Evaluación Manual</h3>
+                            <p>Formulario detallado con 16 criterios específicos para cada tipo de motocicleta, evaluando desde chasis hasta neumáticos.</p>
+                        </div>
+                        <div class="result-card">
+                            <div class="result-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                                    <path d="M9 19v-6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2zm0 0V9a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v10m-6 0a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2m0 0V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2z" stroke="#244577" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <h3>Análisis Eva IA</h3>
+                            <p>Evaluación automática mediante inteligencia artificial que analiza las imágenes capturadas y genera puntuaciones objetivas.</p>
+                        </div>
+                        <div class="result-card">
+                            <div class="result-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke="#244577" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <polyline points="14,2 14,8 20,8" stroke="#244577" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <line x1="16" y1="13" x2="8" y2="13" stroke="#244577" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <line x1="16" y1="17" x2="8" y2="17" stroke="#244577" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <polyline points="10,9 9,9 8,9" stroke="#244577" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <h3>Reporte Detallado</h3>
+                            <p>Documento completo con resultados, puntuaciones, recomendaciones y análisis comparativo entre evaluación manual e IA.</p>
+                        </div>
+                        <div class="result-card">
+                            <div class="result-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                                    <path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" stroke="#244577" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <h3>Galería de Imágenes</h3>
+                            <p>Visualización de todas las imágenes capturadas durante el proceso de evaluación con anotaciones técnicas.</p>
+                        </div>
+                    </div>
+                    <div class="evaluation-criteria">
+                        <h3>Criterios de Evaluación</h3>
+                        <div class="criteria-list">
+                            <div class="criteria-item">
+                                <strong>Chasis y Pintura:</strong> Estado general del cuerpo de la motocicleta
+                            </div>
+                            <div class="criteria-item">
+                                <strong>Tanque:</strong> Condición del depósito de combustible
+                            </div>
+                            <div class="criteria-item">
+                                <strong>Piso:</strong> Estado del suelo del vehículo
+                            </div>
+                            <div class="criteria-item">
+                                <strong>Faros:</strong> Funcionamiento de las luces delanteras
+                            </div>
+                            <div class="criteria-item">
+                                <strong>Direccionales:</strong> Estado de las luces indicadoras
+                            </div>
+                            <div class="criteria-item">
+                                <strong>Bocina:</strong> Funcionamiento del claxon
+                            </div>
+                            <div class="criteria-item">
+                                <strong>Tacómetro:</strong> Estado del velocímetro
+                            </div>
+                            <div class="criteria-item">
+                                <strong>Tapicería:</strong> Condición de los asientos
+                            </div>
+                            <div class="criteria-item">
+                                <strong>Placa:</strong> Estado de la matrícula
+                            </div>
+                            <div class="criteria-item">
+                                <strong>Estructura:</strong> Chasis, silenciador y amortiguadores
+                            </div>
+                            <div class="criteria-item">
+                                <strong>Llave:</strong> Estado del sistema de llaves
+                            </div>
+                            <div class="criteria-item">
+                                <strong>Embrague:</strong> Funcionamiento del clutch
+                            </div>
+                            <div class="criteria-item">
+                                <strong>Encendido:</strong> Sistema de arranque
+                            </div>
+                            <div class="criteria-item">
+                                <strong>Batería:</strong> Estado de la batería
+                            </div>
+                            <div class="criteria-item">
+                                <strong>Frenos:</strong> Sistema de frenado
+                            </div>
+                            <div class="criteria-item">
+                                <strong>Neumáticos:</strong> Desgaste de las llantas
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <!-- Página de Seguridad -->
+        <div id="seguridad" class="page">
+            <header class="header">
+                <div class="logo">
+                    <h1>Seguridad y Autenticación</h1>
+                    <p>Protección de datos y acceso seguro</p>
+                </div>
+            </header>
+            <main class="main-content">
+                <div class="security-section">
+                    <h2>Características de Seguridad</h2>
+                    <div class="security-grid">
+                        <div class="security-card">
+                            <div class="security-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="#244577" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <h3>Autenticación JWT</h3>
+                            <p>Sistema de autenticación basado en tokens JWT para acceso seguro y controlado a la aplicación.</p>
+                        </div>
+                        <div class="security-card">
+                            <div class="security-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="#244577" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <h3>Almacenamiento Seguro</h3>
+                            <p>Datos sensibles encriptados con AsyncStorage y protección AES para información del usuario.</p>
+                        </div>
+                        <div class="security-card">
+                            <div class="security-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                                    <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" stroke="#244577" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M13.73 21a2 2 0 0 1-3.46 0" stroke="#244577" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <h3>Validación de Entrada</h3>
+                            <p>Validación robusta de formularios con manejo de errores y feedback visual para el usuario.</p>
+                        </div>
+                        <div class="security-card">
+                            <div class="security-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                                    <path d="M9 12l2 2 4-4" stroke="#244577" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M21 12c-1 0-2-1-2-2s1-2 2-2 2 1 2 2-1 2-2 2z" stroke="#244577" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M3 12c1 0 2-1 2-2s-1-2-2-2-2 1-2 2 1 2 2 2z" stroke="#244577" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <h3>Auto-Login</h3>
+                            <p>Sistema de auto-login que mantiene la sesión del usuario de forma segura entre sesiones.</p>
+                        </div>
+                        <div class="security-card">
+                            <div class="security-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke="#244577" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <polyline points="14,2 14,8 20,8" stroke="#244577" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <line x1="16" y1="13" x2="8" y2="13" stroke="#244577" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <line x1="16" y1="17" x2="8" y2="17" stroke="#244577" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <polyline points="10,9 9,9 8,9" stroke="#244577" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <h3>Manejo de Errores</h3>
+                            <p>Sistema completo de manejo de errores con logging y notificaciones para debugging.</p>
+                        </div>
+                        <div class="security-card">
+                            <div class="security-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                                    <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" stroke="#244577" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <circle cx="12" cy="13" r="4" stroke="#244577" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <h3>Subida Segura</h3>
+                            <p>Upload de imágenes con URLs presignadas de S3 para transferencia segura de archivos.</p>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <!-- Página de Estadísticas -->
+        <div id="estadisticas" class="page">
+            <header class="header">
+                <div class="logo">
+                    <h1>Estadísticas y Métricas</h1>
+                    <p>Datos de rendimiento y análisis</p>
+                </div>
+            </header>
+            <main class="main-content">
+                <div class="stats-section">
+                    <h2>Métricas de Eva Mobile</h2>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-number">7</div>
+                            <h3>Tipos de Motocicletas</h3>
+                            <p>Eléctricas, mopets, scooters, enduro, adventure, street y motocarr</p>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">16</div>
+                            <h3>Criterios por Evaluación</h3>
+                            <p>Cada vehículo se evalúa en 16 criterios técnicos específicos</p>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">5</div>
+                            <h3>Imágenes por Evaluación</h3>
+                            <p>Captura secuencial de 5 vistas diferentes de la motocicleta</p>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">5</div>
+                            <h3>Puntos Máximos</h3>
+                            <p>Sistema de puntuación de 0 a 5 puntos por evaluación</p>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">2</div>
+                            <h3>Tipos de Evaluación</h3>
+                            <p>Evaluación de entrada y salida para control de movimientos de motocicletas</p>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">∞</div>
+                            <h3>Evaluaciones Ilimitadas</h3>
+                            <p>Sin límite en el número de evaluaciones por usuario</p>
+                        </div>
+                    </div>
+                    <div class="performance-metrics">
+                        <h3>Métricas de Rendimiento</h3>
+                        <div class="metrics-list">
+                            <div class="metric-item">
+                                <strong>Tiempo de Evaluación:</strong> 2-3 minutos por vehículo
+                            </div>
+                            <div class="metric-item">
+                                <strong>Precisión IA:</strong> 95%+ en identificación de componentes
+                            </div>
+                            <div class="metric-item">
+                                <strong>Compatibilidad:</strong> iOS 12+ / Android 8+
+                            </div>
+                            <div class="metric-item">
+                                <strong>Almacenamiento:</strong> Optimizado para dispositivos móviles
+                            </div>
+                            <div class="metric-item">
+                                <strong>Conectividad:</strong> Requiere conexión a internet para funcionar
+                            </div>
+                            <div class="metric-item">
+                                <strong>Versión Actual:</strong> 1.0.43 (Release 2025-07-26)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <!-- Página de Descarga -->
+        <div id="descarga" class="page">
+            <header class="header">
+                <div class="logo">
+                    <h1>Eva Mobile</h1>
+                    <p>Descarga la aplicación</p>
+                </div>
+            </header>
+            <main class="main-content">
+                <div class="qr-section">
+                    <h2>Descarga por Plataforma</h2>
+                    <div class="platforms">
+                        <div class="platform android">
+                            <div class="platform-header">
+                                <div class="platform-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993.0001.5511-.4482.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993 0 .5511-.4482.9997-.9993.9997m11.4045-6.02l1.9973-3.4592a.416.416 0 00-.1521-.5976.416.416 0 00-.5976.1521l-2.0223 3.5036C15.5902 8.2432 13.8533 7.8237 12 7.8237s-3.5902.4195-4.7075 1.5546L5.2702 5.8746a.416.416 0 00-.5976-.1521.416.416 0 00-.1521.5976L6.1185 9.3214C4.6108 10.5034 3.8 12.2278 3.8 14.073v1.2792c0 .5511.4482.9993.9993.9993h15.4014c.5511 0 .9993-.4482.9993-.9993V14.073c0-1.8452-.8108-3.5696-2.3185-4.7516" fill="#000000"/>
+                                    </svg>
+                                </div>
+                                <h3>Android</h3>
+                            </div>
+                            <div class="qr-container">
+                                <img src="images/qr-android.png" alt="QR Code Android" class="qr-image">
+                            </div>
+                        </div>
+                        <div class="platform ios">
+                            <div class="platform-header">
+                                <div class="platform-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" fill="#000000"/>
+                                    </svg>
+                                </div>
+                                <h3>iOS</h3>
+                            </div>
+                            <div class="qr-container">
+                                <img src="images/qr-ios.png" alt="QR Code iOS" class="qr-image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <!-- Página de Detalles Técnicos -->
+        <div id="detalles" class="page">
+            <header class="header">
+                <div class="logo">
+                    <h1>Eva Mobile</h1>
+                    <p>Detalles Técnicos</p>
+                </div>
+            </header>
+            <main class="main-content">
+                <div class="tech-section">
+                    <h2>Información Técnica</h2>
+                    <div class="tech-grid">
+                        <div class="tech-card">
+                            <h3>Desarrollo</h3>
+                            <ul>
+                                <li><strong>Framework:</strong> React Native con Expo</li>
+                                <li><strong>Versión:</strong> 1.0.43</li>
+                                <li><strong>Lenguaje:</strong> TypeScript</li>
+                                <li><strong>Navegación:</strong> React Navigation</li>
+                                <li><strong>Estado:</strong> Zustand</li>
+                            </ul>
+                        </div>
+                        <div class="tech-card">
+                            <h3>Funcionalidades</h3>
+                            <ul>
+                                <li><strong>Evaluación IA:</strong> Análisis automático de vehículos</li>
+                                <li><strong>Captura:</strong> Imágenes secuenciales</li>
+                                <li><strong>Tipos:</strong> 7 categorías de vehículos</li>
+                                <li><strong>Reportes:</strong> Generación automática</li>
+                                <li><strong>Autenticación:</strong> Sistema seguro</li>
+                            </ul>
+                        </div>
+                        <div class="tech-card">
+                            <h3>Criterios de Evaluación</h3>
+                            <ul>
+                                <li><strong>Eléctrica:</strong> 16 criterios (0-5 puntos)</li>
+                                <li><strong>Mopet:</strong> 16 criterios (0-5 puntos)</li>
+                                <li><strong>Scooter:</strong> 16 criterios (0-5 puntos)</li>
+                                <li><strong>Enduro:</strong> 16 criterios (0-5 puntos)</li>
+                                <li><strong>Adventure:</strong> 16 criterios (0-5 puntos)</li>
+                                <li><strong>Street:</strong> 16 criterios (0-5 puntos)</li>
+                                <li><strong>MotoCarr:</strong> 16 criterios (0-5 puntos)</li>
+                            </ul>
+                        </div>
+                        <div class="tech-card">
+                            <h3>API y Servicios</h3>
+                            <ul>
+                                <li><strong>Base URL:</strong> AWS API Gateway</li>
+                                <li><strong>Autenticación:</strong> JWT Token</li>
+                                <li><strong>Predicción:</strong> IA/ML Endpoints</li>
+                                <li><strong>Almacenamiento:</strong> S3 Presigned URLs</li>
+                                <li><strong>Monitoreo:</strong> Health Checks</li>
+                            </ul>
+                        </div>
+                        <div class="tech-card">
+                            <h3>Características Técnicas</h3>
+                            <ul>
+                                <li><strong>Conectividad:</strong> Requiere conexión a internet</li>
+                                <li><strong>Sincronización:</strong> Datos en tiempo real</li>
+                                <li><strong>Seguridad:</strong> Encriptación AES</li>
+                                <li><strong>Performance:</strong> Optimizado para móviles</li>
+                                <li><strong>Compatibilidad:</strong> iOS 12+ / Android 8+</li>
+                            </ul>
+                        </div>
+                        <div class="tech-card">
+                            <h3>Servicios de IA</h3>
+                            <ul>
+                                <li><strong>Inference:</strong> Análisis de imágenes</li>
+                                <li><strong>Warm-up:</strong> Precalentamiento de modelos</li>
+                                <li><strong>Predicción:</strong> Evaluación automática</li>
+                                <li><strong>Segmentación:</strong> Identificación de componentes</li>
+                                <li><strong>Clasificación:</strong> Categorización de vehículos</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <footer class="footer">
+            <p>&copy; 2024 Eva Mobile - Celerix</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
