@@ -886,6 +886,95 @@ body {
     font-weight: 600;
 }
 
+/* Página de Términos y Condiciones */
+.terms-section h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--black);
+    margin-bottom: 2rem;
+    text-align: center;
+    letter-spacing: -0.01em;
+}
+
+.terms-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.terms-card {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.terms-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(36, 69, 119, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.terms-card:hover::before {
+    left: 100%;
+}
+
+.terms-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.terms-card h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--black);
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.01em;
+    border-bottom: 1px solid var(--gray-200);
+    padding-bottom: 0.5rem;
+}
+
+.terms-card p {
+    color: var(--gray-500);
+    font-size: 0.875rem;
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+}
+
+.terms-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.terms-card li {
+    color: var(--gray-500);
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+    padding-left: 0;
+}
+
+.terms-card li:before {
+    content: "•";
+    color: var(--primary);
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+.terms-card strong {
+    color: var(--black);
+    font-weight: 600;
+}
+
 /* Footer */
 .footer {
     text-align: center;
@@ -940,7 +1029,8 @@ body {
     .process-section h2,
     .results-section h2,
     .security-section h2,
-    .stats-section h2 {
+    .stats-section h2,
+    .terms-section h2 {
         font-size: 1.25rem;
     }
     
@@ -993,6 +1083,10 @@ body {
         gap: 1rem;
     }
     
+    .terms-content {
+        gap: 1rem;
+    }
+    
     .process-steps {
         gap: 1rem;
     }
@@ -1042,7 +1136,8 @@ body {
     .process-section h2,
     .results-section h2,
     .security-section h2,
-    .stats-section h2 {
+    .stats-section h2,
+    .terms-section h2 {
         font-size: 1.125rem;
     }
     
