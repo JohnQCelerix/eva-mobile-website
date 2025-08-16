@@ -782,6 +782,25 @@ body {
     color: var(--primary);
 }
 
+.android-download svg {
+    color: var(--text-secondary);
+}
+
+.android-download:hover svg {
+    color: var(--primary);
+}
+
+.android-download {
+    border-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+.android-download:hover {
+    background: rgba(36, 69, 119, 0.05);
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
 /* Página de Detalles Técnicos */
 .tech-section h2 {
     font-size: 1.5rem;
